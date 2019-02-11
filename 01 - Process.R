@@ -1,5 +1,4 @@
 
-t_0 <- Sys.time()
 
 # Parameters ----
 
@@ -35,6 +34,8 @@ decile <- function(x) {
 }
 
 # Get Deciles and compute county score ----
+
+t_0 <- Sys.time()
 
 # This probably should be changed so that the county_score is the 
 # Mahalanobis Distance
@@ -168,7 +169,7 @@ time_to_complete <-
   as.numeric() 
 
 cat(
-sprintf(fmt = 'Completed %d iterations in %02.0f:%02.0f:%04.1f', 
+sprintf(fmt = 'Completed %d iterations in %02.0f:%02.0f:%04.1f\n', 
         i, 
         time_to_complete %/% (60 * 60), 
         (time_to_complete %% (60 * 60) ) %/% 60, 
